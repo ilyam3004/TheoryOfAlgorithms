@@ -64,6 +64,7 @@ namespace Lab1
                               "Max element: " + max + "\n" +
                               "--------------------\n");
         }
+        //------------- Reading array from file and writing output data in file -------------
         static void ReadFromFile()
         {
             string[] lines = File.ReadAllLines(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\input\input.txt");
@@ -96,6 +97,7 @@ namespace Lab1
                               "All output data located in file \"output.txt\"\n" +
                               "--------------------------------------------\n");
         }
+        //------------- Entering array from keyboard -------------
         static void EnterFromKeyboard()
         {
             Console.WriteLine("-------------------------\n" +
