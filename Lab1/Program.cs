@@ -9,12 +9,14 @@ namespace Lab1
 
         static void Main(string[] args)
         {
-            while (true)
+            bool exit = false;
+            while (!exit)
             {
                 Console.WriteLine("Choose the command:\n" +
                                   "1.Random numbers\n" +
                                   "2.Enter numbers from keyboards\n" +
-                                  "3.Read numbers from file");
+                                  "3.Read numbers from file\n" +
+                                  "4.Exit");
                 string command = Console.ReadLine();
                 switch (command)
                 {
@@ -27,9 +29,12 @@ namespace Lab1
                     case "3":
                         ReadFromFile();
                         break;
+                    case "4":
+                        exit = true;
+                        break;
                     default:
                         Console.WriteLine("Wrong command:( Please, try Again\n" +
-                                          "-------------------------------- ");
+                                          "-------------------------------- "); 
                         break;
                 }
             }
@@ -63,6 +68,21 @@ namespace Lab1
             Console.WriteLine("--------------------\n" +
                               "Max element: " + max + "\n" +
                               "--------------------\n");
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
+            {
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if(array[i, j] > max)
+                            max = array[i, j];
+                        sw.Write(array[i, j] + " ");
+                    }
+                    sw.WriteLine();
+                }
+                sw.WriteLine("Max element of this array: " + max);
+                sw.WriteLine("----------------------------");
+            }
         }
         //------------- Reading array from file and writing output data in file -------------
         static void ReadFromFile()
@@ -130,6 +150,21 @@ namespace Lab1
             Console.WriteLine("--------------------\n" +
                               "Max element: " + max + "\n" +
                               "--------------------\n");
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
+            {
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if(array[i, j] > max)
+                            max = array[i, j];
+                        sw.Write(array[i, j] + " ");
+                    }
+                    sw.WriteLine();
+                }
+                sw.WriteLine("Max element of this array: " + max);
+                sw.WriteLine("----------------------------");
+            }
         }
     }
 }
