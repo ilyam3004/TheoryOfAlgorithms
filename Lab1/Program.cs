@@ -51,7 +51,7 @@ namespace Lab1
             Console.WriteLine("To:");
             int to = int.Parse(Console.ReadLine());
             array = new int[rows, columns];
-            int max = array[0, 0];
+            int min = array[0, 0];
             Random rnd = new();
             Console.WriteLine("-------------------------\n" + "Array:"); 
             for (int i = 0; i < rows; i++)
@@ -60,13 +60,13 @@ namespace Lab1
                 { 
                     array[i, j] = rnd.Next(from, to);
                     Console.Write(array[i,j] + " ");
-                    if (array[i, j] > max)
-                        max = array[i, j];
+                    if (array[i, j] < min)
+                        min = array[i, j];
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("--------------------\n" +
-                              "Max element: " + max + "\n" +
+                              "Min element: " + min + "\n" +
                               "--------------------\n");
             using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
             {
@@ -74,13 +74,13 @@ namespace Lab1
                 {
                     for (int j = 0; j < columns; j++)
                     {
-                        if(array[i, j] > max)
-                            max = array[i, j];
+                        if(array[i, j] < min)
+                            min = array[i, j];
                         sw.Write(array[i, j] + " ");
                     }
                     sw.WriteLine();
                 }
-                sw.WriteLine("Max element of this array: " + max);
+                sw.WriteLine("Min element of this array: " + min);
                 sw.WriteLine("----------------------------");
             }
         }
@@ -97,20 +97,20 @@ namespace Lab1
                     array[i, j] = int.Parse(temp[j]);
                 }
             }
-            int max = array[0, 0];
+            int min = array[0, 0];
             using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
             {
                 for (int i = 0; i < lines.Length; i++)
                 {
                     for (int j = 0; j < lines[0].Split(' ').Length; j++)
                     {
-                        if(array[i, j] > max)
-                            max = array[i, j];
+                        if(array[i, j] < min)
+                            min = array[i, j];
                         sw.Write(array[i, j] + " ");
                     }
                     sw.WriteLine();
                 }
-                sw.WriteLine("Max element of this array: " + max);
+                sw.WriteLine("Min element of this array: " + min);
                 sw.WriteLine("----------------------------");
             }
             Console.WriteLine("--------------------------------------------\n" +
@@ -135,20 +135,20 @@ namespace Lab1
                     array[i, j] = int.Parse(Console.ReadLine());
                 }
             }
-            int max = array[0, 0];
+            int min = array[0, 0];
             Console.WriteLine("You entered this array:");
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
                     Console.Write(array[i, j] + " ");
-                    if (array[i, j] > max)
-                        max = array[i, j];
+                    if (array[i, j] < min)
+                        min = array[i, j];
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("--------------------\n" +
-                              "Max element: " + max + "\n" +
+                              "Min element: " + min + "\n" +
                               "--------------------\n");
             using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
             {
@@ -156,13 +156,13 @@ namespace Lab1
                 {
                     for (int j = 0; j < columns; j++)
                     {
-                        if(array[i, j] > max)
-                            max = array[i, j];
+                        if(array[i, j] < min)
+                            min = array[i, j];
                         sw.Write(array[i, j] + " ");
                     }
                     sw.WriteLine();
                 }
-                sw.WriteLine("Max element of this array: " + max);
+                sw.WriteLine("Min element of this array: " + min);
                 sw.WriteLine("----------------------------");
             }
         }
