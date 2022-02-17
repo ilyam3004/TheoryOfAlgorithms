@@ -18,25 +18,32 @@ namespace Lab1
                                   "2.Enter numbers from keyboards\n" +
                                   "3.Read numbers from file\n" +
                                   "4.Exit");
-                string command = Console.ReadLine();
-                switch (command)
+                try
                 {
-                    case "1":
-                        RandomNumbers();
-                        break;
-                    case "2":
-                        EnterFromKeyboard();
-                        break;
-                    case "3":
-                        ReadFromFile();
-                        break;
-                    case "4":
-                        exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Wrong command:( Please, try Again\n" +
-                                          "-------------------------------- "); 
-                        break;
+                    string command = Console.ReadLine();
+                    switch (command)
+                    {
+                        case "1":
+                            RandomNumbers();
+                            break;
+                        case "2":
+                            EnterFromKeyboard();
+                            break;
+                        case "3":
+                            ReadFromFile();
+                            break;
+                        case "4":
+                            exit = true;
+                            break;
+                        default:
+                            Console.WriteLine("Wrong command:( Please, try again\n" +
+                                              "-------------------------------- ");
+                            break;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Wrong command:( Please try again");
                 }
             }
         }
@@ -45,21 +52,21 @@ namespace Lab1
         {
             //Start input data
             Console.WriteLine("-------------------------\n" + "Enter count of columns:");
-            int m = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
             Console.WriteLine("-------------------------\n" + "Enter count of rows:");
-            int n = int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine());
             Console.WriteLine("----------------------\n" + "Enter range of numbers\nFrom:");
             int from = int.Parse(Console.ReadLine());
             Console.WriteLine("To:");
             int to = int.Parse(Console.ReadLine());
-            array = new int[n, m];
+            array = new int[a, b];
             int min = array[0, 0];
             string index = "";
             Random rnd = new();
             //Entering random numbers in array
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < a; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < b; j++)
                 {
                     array[i, j] = rnd.Next(from, to);
                 }
@@ -68,9 +75,9 @@ namespace Lab1
             var stopWatch = new Stopwatch();
             stopWatch.Start();
             //Main code for searching min element
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < a; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < b; j++)
                 {
                     if(array[i, j] < min)
                     {
@@ -87,9 +94,9 @@ namespace Lab1
                               "--------------------\n");
             using (StreamWriter sw = new StreamWriter(@"C:\Users\ilyam\Desktop\Навчання\TheoryOfAlgorithms\Lab1\output\output.txt", true, System.Text.Encoding.Default))
             {
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < a; i++)
                 {
-                    for (int j = 0; j < m; j++)
+                    for (int j = 0; j < b; j++)
                     {
                         sw.Write(array[i, j] + " ");
                     }
