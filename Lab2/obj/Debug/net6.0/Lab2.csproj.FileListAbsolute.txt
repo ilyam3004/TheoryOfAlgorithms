@@ -1,0 +1,15 @@
+D:\Learning\TheoryOfAlgorithms\Lab2\bin\Debug\net6.0\Lab2.exe
+D:\Learning\TheoryOfAlgorithms\Lab2\bin\Debug\net6.0\Lab2.deps.json
+D:\Learning\TheoryOfAlgorithms\Lab2\bin\Debug\net6.0\Lab2.runtimeconfig.json
+D:\Learning\TheoryOfAlgorithms\Lab2\bin\Debug\net6.0\Lab2.dll
+D:\Learning\TheoryOfAlgorithms\Lab2\bin\Debug\net6.0\Lab2.pdb
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.csproj.AssemblyReference.cache
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfoInputs.cache
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfo.cs
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.csproj.CoreCompileInputs.cache
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.dll
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\refint\Lab2.dll
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.pdb
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\Lab2.genruntimeconfig.cache
+D:\Learning\TheoryOfAlgorithms\Lab2\obj\Debug\net6.0\ref\Lab2.dll
