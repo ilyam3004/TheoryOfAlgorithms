@@ -6,16 +6,19 @@ namespace Lab2
 {
     public class Graph
     {
+        public Edge[,] edgeMatrix;
         public int[,] flowMatrix;
         public int[,] incMatrix;
         private Edge[] edges;
         public int[] vertexes;
+
         public Graph()
         {
             edges = SetEdges();
             vertexes = SetVertexes();
             incMatrix = IncMatrix();
             flowMatrix = new int[vertexes.Length, edges.Length];
+            edgeMatrix = EdgeMatrix();
         }
         public int[,] IncMatrix()
         {
@@ -52,12 +55,22 @@ namespace Lab2
         {
             int[,] matrix = IncMatrix();
             List<int> incVertexes = new();
-            for (int i = 0; i < edges.Length; i++)
+            for (int i = 0; i < edgeMatrix.GetLength(0); i++)
             {
-                if (matrix[vertex - 1, edges[i].number - 1] > 0)
-                    incVertexes.Add(vertex == edges[i].endVertex ? edges[i].startVertex : edges[i].endVertex);
+                if (edgeMatrix[vertex - 1, i] != null)
+                    incVertexes.Add(vertex == edgeMatrix[vertex - 1, i].endVertex ? edgeMatrix[vertex - 1, i].startVertex : edgeMatrix[vertex - 1, i].endVertex);
             }
             return incVertexes;
+        }
+        public bool isAdjacent(int currentVertex, int stockVertex)
+        {
+            List<int> adjVertexes = PathAbleVertexes(currentVertex);
+            foreach (var item in adjVertexes)
+            {
+                if (item == stockVertex)
+                    return true;
+            }
+            return false;
         }
         public static int[] SetVertexes()
         {
@@ -71,10 +84,23 @@ namespace Lab2
             int[,] adjMatrix = AdjMatrix();
             Edge[,] edgeMatrix = new Edge[adjMatrix.GetLength(0), adjMatrix.GetLength(1)];
             for (var i = 0; i < edges.Length; i++)
-            {
                 edgeMatrix[edges[i].startVertex - 1, edges[i].endVertex - 1] = edges[i];
-            }
             return edgeMatrix;
+        }
+        public int GetMinThroughput(List<Edge> edges)
+        {
+            int minThroughput = edges[0].weight;
+            foreach (var item in edges)
+            {
+                if (item.weight < minThroughput)
+                    minThroughput = item.weight;
+            }
+            return minThroughput;
+        }
+        public void SetFlow(List<Edge> edges, int minThroughput)
+        {
+            foreach (var item in edges)
+                item.flow = minThroughput;
         }
         public static Edge[] SetEdges()
         {

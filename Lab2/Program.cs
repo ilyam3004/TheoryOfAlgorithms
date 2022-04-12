@@ -4,7 +4,7 @@ namespace Lab2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Method()
         {
             Graph graph = new();
             Edge[,] edgeMatrix = graph.EdgeMatrix();
