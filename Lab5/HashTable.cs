@@ -15,19 +15,7 @@ namespace Lab5
             capacity = DEF_CAPACITY;
             array = new List<KeyValue<string, string>>[capacity];
         }
-        public void Add(string key, string value)
-        {
-            int index = GetHash2(key);
-            KeyValue<string, string> node = new KeyValue<string, string>(key, value);
-            size++;
-            if((size * 100) / capacity > 80)
-            {
-            }
-
-            if (array[index] == null)
-                array[index] = new List<KeyValue<string, string>>();
-            array[index].Add(node);
-        }
+        public void Add(string key, string value) => AddNode(new KeyValue<string, string>(key, value), GetHash1(key));
         public void ShowAll()
         {
             for(int i = 0; i < array.Length; i++)
@@ -76,6 +64,22 @@ namespace Lab5
             Array.Resize(ref array, size * 2);
             for(int i = 0; i < array.Length; i++)
                 array[i] = null;
+            foreach (var item in nodes)
+                Add(item.key, item.value);
+            
+        }
+
+        private void AddNode(KeyValue<string, string> node, int index)
+        {
+            
+            size++;
+            if((size * 100) / capacity > 80)
+            {
+            }
+
+            if (array[index] == null)
+                array[index] = new List<KeyValue<string, string>>();
+            array[index].Add(node);
         }
         public string GetValue(string key) => GetNode(key).value;
         
