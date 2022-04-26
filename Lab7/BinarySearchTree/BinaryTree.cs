@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Data;
-using System.Transactions;
+using System.Threading;
 
 namespace Lab7.BinarySearchTree
 {
     public class BinaryTree
     {
         private Node root;
-        public string path { get; set; }
+        public string path = "Path of signal: ";
 
         public string Add(int data)
         {
-            path = "";
+            path = "Path of signal: ";
             return AddNode(ref root, new Node(data), null);;
         }
         private string AddNode(ref Node currentNode, Node node, Node parent)
@@ -20,6 +19,8 @@ namespace Lab7.BinarySearchTree
             {
                 currentNode = node;
                 currentNode.parent = parent;
+                Console.WriteLine($"New ship with {currentNode.data} sailors is arriving...");
+                Thread.Sleep(500);
                 return path;
             }
             if(currentNode.data != node.data)
@@ -43,18 +44,14 @@ namespace Lab7.BinarySearchTree
             if (currentNode != null)
             {
                 if (data == currentNode.data)
-                {
                     return currentNode;
-                }
+                
 
                 if (data < currentNode.data)
-                {
                     return FindNode(currentNode.left, data);
-                }
                 else
-                {
                     return FindNode(currentNode.right, data);
-                }
+                
             }
             return null;
         }
