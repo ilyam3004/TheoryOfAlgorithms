@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Lab7.BinarySearchTree
+﻿namespace Lab7.BinarySearchTree
 {
     public class Node
     {

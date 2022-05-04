@@ -42,16 +42,12 @@ namespace Lab9
         }
         public static void InsertionSort(ref int[] array)
         {
-            int temp, index;
+            int index;
             for (int i = 1; i < array.Length; i++)
             {
                 for (index = i; index > 0; index--)
                     if (array[index] < array[index - 1])
-                    {
-                        temp = array[index - 1];
-                        array[index - 1] = array[index];
-                        array[index] = temp;
-                    }
+                        (array[index - 1], array[index]) = (array[index], array[index - 1]);
                     else break;
             }
         }

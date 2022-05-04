@@ -1,0 +1,13 @@
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.exe
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.deps.json
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.runtimeconfig.json
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.runtimeconfig.dev.json
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.dll
+D:\Learning\TheoryOfAlgorithms\Lab12\bin\Debug\netcoreapp3.1\Lab12.pdb
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.csprojAssemblyReference.cache
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.AssemblyInfoInputs.cache
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.AssemblyInfo.cs
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.csproj.CoreCompileInputs.cache
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.dll
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.pdb
+D:\Learning\TheoryOfAlgorithms\Lab12\obj\Debug\netcoreapp3.1\Lab12.genruntimeconfig.cache
