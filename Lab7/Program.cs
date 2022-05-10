@@ -13,7 +13,7 @@ namespace Lab7
             balancedTree.Add(6);
             balancedTree.Add(4);
             balancedTree.Add(14);
-            Console.WriteLine("Signal path: " + balancedTree.Find(10));
+            Console.WriteLine("Signal path: " + balancedTree.Find(4));
         }
     }
 }

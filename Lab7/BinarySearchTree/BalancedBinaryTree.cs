@@ -2,6 +2,14 @@
 {
     public class BalancedBinaryTree : BinaryTree
     {
+        public override void Add(int data)
+        {
+            Node newItem = new Node(data);
+            if (root == null)
+                root = newItem;
+            else
+                root = RecursiveInsert(root, newItem);
+        }
         public override Node RecursiveInsert(Node current, Node n)
         {
             if (current == null)
