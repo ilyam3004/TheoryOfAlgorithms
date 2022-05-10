@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Lab11
+﻿namespace Lab11
 {
     class Program
     {

@@ -7,24 +7,13 @@ namespace Lab7
     {
         static void Main(string[] args)
         {
-            BinaryTree tree = new();
-            tree.Add(15);
-            tree.Add(41);
-            tree.Add(3);
-            tree.Add(8);
-            tree.Add(16);
-            tree.Add(48);
-            tree.Add(2);
-            tree.Add(4);
-            tree.Add(10);
-            while(true)
-            {
-                Console.WriteLine("------------------------");
-                Console.WriteLine("Enter count of pirates:");
-                int pirates = int.Parse(Console.ReadLine());
-                Console.WriteLine(tree.Add(pirates));
-                Console.WriteLine("Pirates ship was destroyed!");
-            }
+            BalancedBinaryTree balancedTree = new();
+            balancedTree.Add(10);
+            balancedTree.Add(8);
+            balancedTree.Add(6);
+            balancedTree.Add(4);
+            balancedTree.Add(14);
+            Console.WriteLine("Signal path: " + balancedTree.Find(10));
         }
     }
 }
