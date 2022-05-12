@@ -45,7 +45,7 @@ namespace Lab9
                 thirdFleet[i] = new Random().Next(10, 99);
             Array.Resize(ref fleet, 30);
             thirdFleet.CopyTo(fleet, 20);
-            Console.WriteLine("List of ships after arriving the second fleet:");
+            Console.WriteLine("List of ships after arriving the third fleet:");
             Console.WriteLine($"{String.Join(", ", fleet)}");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
             
@@ -54,6 +54,33 @@ namespace Lab9
             Console.WriteLine($"{String.Join(", ", fleet)}");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
             
+            int[] fouthFleet = new int[10];
+            for(int i = 0; i < 10; i++)
+                fouthFleet[i] = new Random().Next(10, 99);
+            Array.Resize(ref fleet, 40);
+            fouthFleet.CopyTo(fleet, 30);
+            Console.WriteLine("List of ships after arriving the fouth fleet:");
+            Console.WriteLine($"{String.Join(", ", fleet)}");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            
+            Sorting.ShellSort(ref fleet);
+            Console.WriteLine("List of ships after ShellSort:");
+            Console.WriteLine($"{String.Join(", ", fleet)}");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            
+            int[] fifthFleet = new int[10];
+            for(int i = 0; i < 10; i++)
+                fifthFleet[i] = new Random().Next(10, 99);
+            Array.Resize(ref fleet, 50);
+            thirdFleet.CopyTo(fleet, 40);
+            Console.WriteLine("List of ships after arriving the fifth fleet:");
+            Console.WriteLine($"{String.Join(", ", fleet)}");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            
+            Sorting.ShellSort(ref fleet);
+            Console.WriteLine("List of ships after CountingSort:");
+            Console.WriteLine($"{String.Join(", ", fleet)}");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
         }
     }
 }

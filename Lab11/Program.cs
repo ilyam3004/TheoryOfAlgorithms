@@ -17,7 +17,7 @@ namespace Lab11
             InitFleet(ref fleet, armadasAmount);
             Console.WriteLine("Fleet with " + armadasAmount + " armadas created. \nFleet description : ");
             ShowFleet(fleet);
-            // int[] arr = SmoothSorting(fleet);
+            //int[] arr = SmoothSorting(fleet);
             int[] arr = MergeSorting(fleet);
             Console.WriteLine(ArrayToString(arr));
             Console.Write("\nSorted status : ");
@@ -32,12 +32,13 @@ namespace Lab11
                 }
             }
             Console.WriteLine(sorted);
+            
         }
 
         static int[] MergeSorting(List<int[]> fleet)
         {
             Console.WriteLine("\nSorting ships inside each armada :");
-            SmoothSortArmadas(ref fleet);
+            MergeSortArmadas(ref fleet);
             Console.WriteLine("Fleet with sorted armadas :");
             ShowFleet(fleet);
             Console.WriteLine("Make fleet ship ordered list :");

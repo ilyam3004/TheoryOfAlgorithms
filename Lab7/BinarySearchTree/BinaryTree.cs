@@ -13,6 +13,7 @@ namespace Lab7.BinarySearchTree
                 root = newItem;
             else
                 root = RecursiveInsert(root, newItem);
+            Console.WriteLine($"Add: {data}, root: {root.data}");
         }
         public virtual Node RecursiveInsert(Node current, Node n)
         {

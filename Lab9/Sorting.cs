@@ -51,5 +51,48 @@ namespace Lab9
                     else break;
             }
         }
+        public static int[] ShellSort(ref int[] array)
+        {
+            var d = array.Length / 2;
+            while (d >= 1)
+            {
+                for (var i = d; i < array.Length; i++)
+                {
+                    var j = i;
+                    while ((j >= d) && (array[j - d] > array[j]))
+                    {
+                        Swap(ref array[j], ref array[j - d]);
+                        j = j - d;
+                    }
+                }
+                d = d / 2;
+            }
+            return array;
+        }
+        static void Swap(ref int a, ref int b) => (a, b) = (b, a);
+        
+        static void CountingSort(int[] Array) {
+            int n = Array.Length;
+            int max = 0;
+            for (int i=0; i<n; i++) {  
+                if(max < Array[i]) {
+                    max = Array[i];
+                } 
+            }
+            int[] freq = new int[max+1];
+            for (int i=0; i<max+1; i++) {  
+                freq[i] = 0;
+            } 
+            for (int i=0; i<n; i++) {  
+                freq[Array[i]]++;
+            }
+            for (int i=0, j=0; i<=max; i++) {  
+                while(freq[i]>0) { 
+                    Array[j] = i;
+                    j++;
+                    freq[i]--;
+                }
+            }
+        }
     }
 }

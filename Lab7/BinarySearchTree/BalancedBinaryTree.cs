@@ -1,4 +1,6 @@
-﻿namespace Lab7.BinarySearchTree
+﻿using System;
+
+namespace Lab7.BinarySearchTree
 {
     public class BalancedBinaryTree : BinaryTree
     {
@@ -9,6 +11,7 @@
                 root = newItem;
             else
                 root = RecursiveInsert(root, newItem);
+            Console.WriteLine($"Add: {data}, root: {root.data}");
         }
         public override Node RecursiveInsert(Node current, Node n)
         {
